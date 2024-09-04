@@ -156,9 +156,18 @@
 
 
 
-                <h4 class="sub">Cookies</h4>
+                <h4 class="sub">Cookies - setcookie(name, value, expire, path, domain, secure, httponly)</h4>
                 <div class="content">
-
+                    <?php
+                    echo 'setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");' // 86400 = 1 day
+                        ?>
+                    <br><br>
+                    if(!isset($_COOKIE[$cookie_name])) {<br>
+                    echo "Cookie named '" . $cookie_name . "' is not set!";<br>
+                    } else {<br>
+                    echo "Cookie '" . $cookie_name . "' is set!<br>";<br>
+                    echo "Value is: " . $_COOKIE[$cookie_name];<br>
+                    }<br>
                 </div>
 
 
@@ -166,7 +175,15 @@
 
                 <h4 class="sub">Session</h4>
                 <div class="content">
-
+                    session_start();<br>
+                    // store scalar value<br>
+                    $_SESSION['user'] = 'admin';<br>
+                    // store an array<br>
+                    $_SESSION['roles'] = ['administrator', 'approver', 'editor'];<br>
+                    <br><br>
+                    // destroy the session
+                    <br>
+                    session_destroy();
                 </div>
 
 
@@ -181,8 +198,185 @@
 
 
         <section class="border">
-            <h2 class="title">PHP Functions</h2>
+            <h2 class="title">Section 14. Processing Forms</h2>
             <div class="content">
+
+
+
+
+                <h4 class="sub">PHP Form</h4>
+                <div class="content">
+
+                    <form action="11_20.php" method="POST">
+                        $email_data = $_POST['email'];<br><br>
+                        $email_data = $_GET['email'];<br>
+                        <button type="submit">Submit</button>
+                    </form>
+
+                </div>
+
+
+
+
+
+                <h4 class="sub">Make for Make</h4>
+                <div class="content">
+
+                </div>
+
+
+
+
+
+                <h4 class="sub">Make for Make</h4>
+                <div class="content">
+
+                </div>
+
+
+
+
+
+                <h4 class="sub">Make for Make</h4>
+                <div class="content">
+
+                </div>
+
+
+
+
+
+                <h4 class="sub">Make for Make</h4>
+                <div class="content">
+
+                </div>
+
+
+
+
+
+                <h4 class="sub">Make for Make</h4>
+                <div class="content">
+
+                </div>
+
+
+
+
+
+                <h4 class="sub">Make for Make</h4>
+                <div class="content">
+
+                </div>
+
+
+
+
+
+                <h4 class="sub">Make for Make</h4>
+                <div class="content">
+
+                </div>
+
+
+
+
+
+                <h4 class="sub">Make for Make</h4>
+                <div class="content">
+
+                </div>
+
+
+
+
+
+                <h4 class="sub">Make for Make</h4>
+                <div class="content">
+
+                </div>
+
+
+
+
+
+                <h4 class="sub">Make for Make</h4>
+                <div class="content">
+
+                </div>
+
+
+
+
+
+                <h4 class="sub">Make for Make</h4>
+                <div class="content">
+
+                </div>
+
+
+
+
+
+                <h4 class="sub">Make for Make</h4>
+                <div class="content">
+
+                </div>
+
+
+
+
+
+                <h4 class="sub">Make for Make</h4>
+                <div class="content">
+
+                </div>
+
+
+
+
+
+                <h4 class="sub">Make for Make</h4>
+                <div class="content">
+
+                </div>
+
+
+
+
+
+                <h4 class="sub">Make for Make</h4>
+                <div class="content">
+
+                </div>
+
+
+
+
+
+                <h4 class="sub">Make for Make</h4>
+                <div class="content">
+
+                </div>
+
+
+
+
+
+                <h4 class="sub">Make for Make</h4>
+                <div class="content">
+
+                </div>
+
+
+
+
+
+                <h4 class="sub">Make for Make</h4>
+                <div class="content">
+
+                </div>
+
 
 
 
