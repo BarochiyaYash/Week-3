@@ -1,0 +1,16 @@
+<h4 class="sub">Make for Make</h4>
+<div class="content">
+    <?php
+    
+    
+    ?>
+</div>
+
+
+
+echo
+Case Sensitivity
+PHP Comments
+Creating (Declaring) PHP Variables
+PHP Variables Scope
+PHP echo and print Statements
