@@ -220,7 +220,7 @@
                         echo "The fruit is {$this->name} and the color is {$this->color}.";
                     }
                 }
-                $apple1 = new Fruit1("Apple", "Black");
+                // $apple1 = new Fruit1("Apple", "Black");
                 ?>
             </div>
 
@@ -355,11 +355,20 @@
 
 
 
-            <h4 class="sub">Make for Make</h4>
+            <h4 class="sub">Constants</h4>
             <div class="content">
                 <?php
+                class Goodbye
+                {
+                    const LEAVING_MESSAGE = "Thank you for visiting My Profile!";
+                    public function byebye()
+                    {
+                        echo self::LEAVING_MESSAGE;
+                    }
+                }
 
-
+                $goodbye = new Goodbye();
+                $goodbye->byebye();
                 ?>
             </div>
 
@@ -370,9 +379,118 @@
 
 
 
-            <h4 class="sub">Make for Make</h4>
+            <h4 class="sub">Abstract Classes</h4>
             <div class="content">
                 <?php
+                abstract class aa
+                {
+                    public $name;
+                    public function __construct($name)
+                    {
+                        $this->name = $name;
+                    }
+                    abstract function info();
+                }
+                class bb extends aa
+                {
+                    public function info()
+                    {
+                        echo "I am From BB" . $this->name . "<br>";
+                    }
+                }
+                class cc extends aa
+                {
+                    public function info()
+                    {
+                        echo "I am From CC" . $this->name . "<br>";
+                    }
+                }
+                class dd extends aa
+                {
+                    public function info()
+                    {
+                        echo "I am From DD" . $this->name . "<br>";
+                    }
+                }
+                $obj1 = new bb(" Yash");
+                $obj1->info();
+
+                $obj2 = new cc(" Yash_2");
+                $obj2->info();
+
+                $obj3 = new dd(" Yash_3");
+                $obj3->info();
+
+
+                echo "<br><br>";
+                echo "<br><br>";
+                abstract class ab_new
+                {
+                    public $name;
+                    abstract public function add_name($name);
+                }
+                class ab_new_2 extends ab_new
+                {
+                    public function add_name($name, $sp = " ", $com = " From Adobe")
+                    {
+                        $this->name = $name;
+                        echo $name . $sp . $com . ". <br><br>";
+                    }
+                }
+                $obj1 = new ab_new_2;
+                $obj1->add_name("Yash");
+                $obj2 = new ab_new_2;
+                $obj2->add_name("Max", " ", "From Google");
+
+                ?>
+            </div>
+
+
+
+
+            <h4 class="sub">Interfaces</h4>
+            <div class="content">
+                <?php
+
+                interface Animal
+                {
+                    public function makeSound();
+                    public function age();
+                }
+
+                class cat implements Animal
+                {
+                    public function makeSound()
+                    {
+                        echo "Cat Make's Sound!!<br><br>";
+                    }
+                    public function age()
+                    {
+                        echo "Cat Age is 22.<br><br>";
+                    }
+                }
+                class dog implements Animal
+                {
+                    public function makeSound()
+                    {
+                        echo "Dog Make's Sound!!<br><br>";
+                    }
+                    public function age()
+                    {
+                        echo "Dog Age is 25<br><br>";
+                    }
+                }
+
+                $obj_cat = new cat();
+                $obj_cat->makeSound();
+
+                $obj_dog = new dog();
+                $obj_dog->makeSound();
+
+                $obj_cat->age();
+                $obj_dog->age();
+
+
 
 
                 ?>
@@ -380,12 +498,105 @@
 
 
 
+
+            <h4 class="sub">Traits</h4>
+            <div class="content">
+                <?php
+
+                trait message1
+                {
+                    public function msg1()
+                    {
+                        echo "OOP is fun! ";
+                    }
+
+                }
+
+                trait message2
+                {
+                    public function msg2()
+                    {
+                        echo "OOP reduces code duplication!";
+                    }
+                }
+
+                class Welcome
+                {
+                    use message1;
+                }
+
+                class Welcome2
+                {
+                    use message1, message2;
+                }
+
+                $obj = new Welcome();
+                $obj->msg1();
+                echo "<br>";
+
+                $obj2 = new Welcome2();
+                $obj2->msg1();
+                $obj2->msg2();
+                ?>
+            </div>
+
+
+
+
+            <h4 class="sub">Static Methods</h4>
+            <div class="content">
+                <?php
+                class test_static
+                {
+                    public static function print_new()
+                    {
+                        echo "I am From STATIC FUNCTION USING __CONST Call";
+                    }
+                    public function __construct()
+                    {
+                        self::print_new();
+                    }
+                }
+                new test_static();
+
+
+                echo "<br><br><br><br>";
+                echo "Use for 2 Methord";
+                echo "<br><br>";
+                class A
+                {
+                    public static function welcome()
+                    {
+                        echo "Hello World";
+                        echo " Bro!";
+                    }
+                }
+                class B
+                {
+                    public function message()
+                    {
+                        A::welcome();
+                    }
+                }
+
+                $obj = new B();
+                echo $obj->message();
+                ?>
+            </div>
+
+
+
+            <h4 class="sub">Make for Make</h4>
+            <div class="content">
+                <?php
+
+
+                ?>
+            </div>
 
 
         </div>
     </section>
-
-
 
 
 
