@@ -50,10 +50,6 @@
         } else {
             echo 'Please Enter Number in Text Box!!';
         }
-
-
-
-
     }
     ?>
 
